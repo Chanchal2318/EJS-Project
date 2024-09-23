@@ -1,0 +1,28 @@
+<%- include('./base/header') %>
+    <div class="container">
+        <div class="row">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Father Name</th>
+                        <th>Adhar Card No</th>
+                        <th>Mobile No</th>
+                    </tr>
+                </thead>
+                <% children.forEach((student)=>{ %>
+                    <tr>
+                        <td><%= student.rollNo %></td>
+                        <td><%= student.firstName %></td>
+                        <td><%= student.lastName %></td>
+                        <td><%= student.fatherName %></td>
+                        <td><%= student.adharCardNo  %></td>
+                        <td><%= student.mobileNo %></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+    </div>
+<%- include('./base/footer') %>
